@@ -1,0 +1,106 @@
+{
+  "window.commandCenter": 1,
+  "editor.fontSize": 13.5,
+  "editor.linkedEditing": true,
+  "editor.lineNumbers": "relative",
+  "workbench.statusBar.visible": true,
+  "editor.minimap.enabled": false,
+  "vim.easymotion": false,
+  "vim.showMarksInGutter": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.3)",
+  "vim.highlightedyank.duration": 300,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // tab movements
+    {
+      "before": [ "<C-Shift-l>"],
+      "commands": [ "workbench.action.moveActiveEditorGroupRight" ]
+    },
+    {
+      "before": [ "<leader>", "x" ],
+      "commands": [ "workbench.action.closeActiveEditor" ]
+    },
+    {
+      "before": [ "<leader>", "h" ],
+      "after": [ "C-w", "h" ]
+    },
+    {
+      "before": [ "<leader>", "l" ],
+      "after": [ "C-w", "l" ]
+    },
+    {
+      "before": [ "<leader>", "j" ],
+      "after": [ "C-w", "j" ]
+    },
+    {
+      "before": [ "<leader>", "k" ],
+      "after": [ "C-w", "k" ]
+    },
+    {
+      "before": [ "C-h" ],
+      "commands": [ "workbench.action.previousEditor" ]
+    },
+    {
+      "before": [ "C-l" ],
+      "commands": [ "workbench.action.nextEditor" ]
+    },
+    // cursor movements
+    {
+      "before": [ "g", "b" ],
+      "commands": [ "workbench.action.navigateBack" ]
+    },
+    {
+      "before": [ "g", "f" ],
+      "commands": [ "workbench.action.navigateForward" ]
+    },
+    {
+      "before": [ "<leader>", "e" ],
+      "commands": [ "editor.action.marker.next" ]
+    },
+    // vertical scrolling
+    {
+      "before": [ "<C-u>" ],
+      "after": [ "<C-u>", "z", "z" ]
+    },
+    {
+      "before": [ "<C-d>" ],
+      "after": [ "<C-d>", "z", "z" ],
+    },
+    // refactoring
+    {
+      "before": [ "<leader>", "r" ],
+      "commands": [ "editor.action.rename" ],
+    },
+    {
+      "before": [ "\\", "r" ],
+      "commands": [ "editor.action.formatDocument" ],
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-a>": true,
+    "<C-f>": true,
+    "<C-u>": true,
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme"
+}
