@@ -85,10 +85,6 @@
         "key": "cmd+1"
     },
     {
-        "key": "cmd+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
-    },
-    {
         "command": "workbench.files.action.focusFilesExplorer",
         "key": "cmd+1",
         "when": "editorTextFocus"
