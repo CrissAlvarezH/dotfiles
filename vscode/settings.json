@@ -3,7 +3,6 @@
   "editor.fontSize": 13.5,
   "editor.linkedEditing": true,
   "editor.lineNumbers": "relative",
-  "workbench.statusBar.visible": true,
   "editor.minimap.enabled": false,
   "vim.easymotion": false,
   "vim.showMarksInGutter": true,
@@ -90,6 +89,20 @@
       "before": [ "\\", "r" ],
       "commands": [ "editor.action.formatDocument" ],
     },
+    // cursor (editos) config
+    {
+      "before": [ "\\", "e" ],
+      "commands": [ "editor.action.enableCppGlobally" ],
+    },
+    {
+      "before": [ "\\", "d" ],
+      "commands": [ "editor.cpp.disableenabled" ],
+    },
+    // with scape remove searching highlights made by ?<char> command to lookup
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohlsearch"]
+    }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -102,5 +115,8 @@
     "vscodevim.vim": 1
   },
   "files.autoSave": "afterDelay",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme"
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme",
+  "cursor.cpp.enablePartialAccepts": true,
+  "makefile.configureOnOpen": true,
+  "go.toolsManagement.autoUpdate": true
 }
