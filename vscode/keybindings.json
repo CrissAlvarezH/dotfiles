@@ -56,7 +56,7 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "space x",
+        "key": "ctrl+x",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
@@ -100,7 +100,7 @@
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
-        "key": "shift+n",
+        "key": "ctrl+n",
         "command": "explorer.newFolder",
         "when": "explorerViewletFocus"
     },
