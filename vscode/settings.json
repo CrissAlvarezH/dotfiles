@@ -11,7 +11,7 @@
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": false,
   "vim.showMarksInGutter": true,
-  "vim.incsearch": true,
+  "vim.incsearch": false, // false because (<leader> m) to search for method definitions and not move the screen
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.3)",
@@ -26,6 +26,18 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // go to previews/next function definition with regex: (def\ |function\ )
+    {
+      "before": [ "<leader>", "m" ],
+      "after": [ "?", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
+      "commands": [ ":noh" ],
+    },
+    {
+      "before": [ "<leader>", "M" ],
+      "after": [ "/", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
+      "commands": [ ":noh" ],
+    },
+
     // camel case motion
     {
       "before": [ "]", "w" ],
@@ -152,5 +164,5 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.tabSize": 2,
   "workbench.editor.revealIfOpen": true,
-  "editor.cursorSurroundingLines": 5
+  "editor.cursorSurroundingLines": 5,
 }
