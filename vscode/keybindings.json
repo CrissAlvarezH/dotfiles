@@ -7,8 +7,9 @@
     },
     {
         "key": "ctrl+-",
-        "command": "workbench.action.splitEditorDown"
+        "command": "workbench.action.splitEditorDown",
     },
+
     // terminal
     {
         "key": "ctrl+;",
@@ -60,6 +61,7 @@
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
+
     // tab movements
     {
         "key": "ctrl+shift+-",
@@ -79,30 +81,41 @@
         "key": "ctrl+shift+h",
         "command": "workbench.action.moveEditorToPreviousGroup"
     },
+
     // file tree
     {
+        "key": "cmd+1",
         "command": "workbench.action.toggleSidebarVisibility",
-        "key": "cmd+1"
     },
     {
-        "command": "workbench.files.action.focusFilesExplorer",
         "key": "cmd+1",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorTextFocus || terminalFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.files.action.focusFilesExplorer",
         "when": "editorTextFocus"
     },
     {
-        "key": "n",
+        "key": "a",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
-        "command": "renameFile",
-        "key": "r",
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "shift+[",
+        "command": "list.focusParent",
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
-        "key": "ctrl+n",
-        "command": "explorer.newFolder",
-        "when": "explorerViewletFocus"
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && !inputFocus"
     },
     {
         "key": "/",
@@ -110,9 +123,9 @@
         "when": "explorerViewletFocus"
     },
     {
-        "key": "Enter",
+        "key": "o",
         "command": "list.toggleExpand",
-        "when": "explorerViewletFocus && explorerResourceIsFolder"
+        "when": "listFocus && !inputFocus"
     },
     {
         "key": "Enter",
@@ -123,5 +136,25 @@
         "command": "deleteFile",
         "key": "d",
         "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+r",
+        "command": "workbench.files.action.refreshFilesExplorer",
+        "when": "filesExplorerFocus && !explorerFindProviderActive && !inputFocus"
+    },
+    {
+        "key": "v",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
     },
 ]
