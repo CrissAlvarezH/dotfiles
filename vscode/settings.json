@@ -151,5 +151,6 @@
   "go.toolsManagement.autoUpdate": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.tabSize": 2,
-  "workbench.editor.revealIfOpen": true
+  "workbench.editor.revealIfOpen": true,
+  "editor.cursorSurroundingLines": 5
 }
