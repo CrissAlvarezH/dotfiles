@@ -133,6 +133,11 @@
         "when": "explorerViewletFocus && !explorerResourceIsFolder"
     },
     {
+        "key": "Enter",
+        "command": "list.toggleExpand",
+        "when": "explorerViewletFocus && explorerResourceIsFolder"
+    },
+    {
         "command": "deleteFile",
         "key": "d",
         "when": "filesExplorerFocus && !inputFocus"
