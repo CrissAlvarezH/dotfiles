@@ -1,170 +1,179 @@
+
 {
-    "window.commandCenter": true,
-    "files.autoSave": "afterDelay",
-    "workbench.iconTheme": "vscode-simpler-icons",
-    "cursor.cpp.enablePartialAccepts": true,
-    "makefile.configureOnOpen": true,
-    "go.toolsManagement.autoUpdate": true,
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "editor.tabSize": 2,
-    "workbench.editor.revealIfOpen": true,
-    "editor.cursorSurroundingLines": 5,
-    "cursor.cmdk.autoSelect": false,
-    "editor.fontSize": 13.5,
-    "terminal.integrated.fontSize": 13.5,
-    "editor.linkedEditing": true,
-    "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": false,
-    // "vim.enableNeovim": true,
-    // "vim.neovimUseConfigFile": true,
-    // "vim.neovimConfigPath": "/Users/cralvarez/.config/nvim",
-    // "vim.neovimPath": "/opt/homebrew/bin/nvim",
-    "vim.camelCaseMotion.enable": true,
-    "vim.easymotion": false,
-    "vim.showMarksInGutter": true,
-    "vim.incsearch": false, // false because (<leader> m) to search for method definitions and not move the screen
-    "vim.useSystemClipboard": true,
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.3)",
-    "vim.highlightedyank.duration": 300,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.sneak": true,
-    "vim.insertModeKeyBindings": [
-      {
-        "before": [ "j", "k" ],
-        "after": [ "<Esc>" ]
-      }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      // go to previews/next function definition with regex: (def\ |function\ )
-      {
-        "before": [ "<leader>", "m" ],
-        "after": [ "?", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
-        "commands": [ ":noh" ],
-      },
-      {
-        "before": [ "<leader>", "M" ],
-        "after": [ "/", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
-        "commands": [ ":noh" ],
-      },
-  
-      // camel case motion
-      {
-        "before": [ "]", "w" ],
-        "after": [ "<leader>", "w" ]
-      },
-      {
-        "before": [ "[", "w" ],
-        "after": [ "<leader>", "b" ]
-      },
-  
-      // tab movements
-      {
-        "before": [ "<C-Shift-l>"],
-        "commands": [ "workbench.action.moveActiveEditorGroupRight" ]
-      },
-      {
-        "before": [ "<leader>", "x" ],
-        "commands": [ "workbench.action.closeActiveEditor" ]
-      },
-      {
-        "before": [ "<leader>", "h" ],
-        "after": [ "C-w", "h" ]
-      },
-      {
-        "before": [ "<leader>", "l" ],
-        "after": [ "C-w", "l" ]
-      },
-      {
-        "before": [ "<leader>", "j" ],
-        "after": [ "C-w", "j" ]
-      },
-      {
-        "before": [ "<leader>", "k" ],
-        "after": [ "C-w", "k" ]
-      },
-      {
-        "before": [ "C-h" ],
-        "commands": [ "workbench.action.previousEditorInGroup" ]
-      },
-      {
-        "before": [ "C-l" ],
-        "commands": [ "workbench.action.nextEditorInGroup" ]
-      },
-  
-      // code info
-      {
-        "before": [ "<S-k>"],
-        "commands": [ "editor.action.showHover" ]
-      },
-      {
-        "before": ["<leader>", "s"],
-        "commands": ["workbench.action.gotoSymbol"]
-      },
-      // cursor movements
-      {
-        "before": [ "g", "b" ],
-        "commands": [ "workbench.action.navigateBack" ]
-      },
-      {
-        "before": [ "g", "f" ],
-        "commands": [ "workbench.action.navigateForward" ]
-      },
-      {
-        "before": [ "<leader>", "e" ],
-        "commands": [ "editor.action.marker.next" ]
-      },
-  
-      // skip folds when moving up and down
-      {
-        "before": [ "j"],
-        "after": [ "g", "j" ]
-      },
-      {
-        "before": [ "k"],
-        "after": [ "g", "k" ]
-      },
-  
-      // vertical scrolling
-      {
-        "before": [ "<C-u>" ],
-        "after": [ "<C-u>", "z", "z" ]
-      },
-      {
-        "before": [ "<C-d>" ],
-        "after": [ "<C-d>", "z", "z" ],
-      },
-  
-      // refactoring
-      {
-        "before": [ "<leader>", "r" ],
-        "commands": [ "editor.action.rename" ],
-      },
-      {
-        "before": [ "\\", "r" ],
-        "commands": [ "editor.action.formatDocument" ],
-      },
-  
-      // cursor editor config
-      {
-        "before": [ "\\", "e" ],
-        "commands": [ "editor.action.enableCppGlobally" ],
-      },
-      {
-        "before": [ "\\", "d" ],
-        "commands": [ "editor.cpp.disableenabled" ],
-      },
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-      "<C-d>": true,
-      "<C-a>": true,
-      "<C-f>": true,
-      "<C-u>": true,
+  "window.commandCenter": true,
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "vscode-simpler-icons",
+  "cursor.cpp.enablePartialAccepts": true,
+  "makefile.configureOnOpen": true,
+  "go.toolsManagement.autoUpdate": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.tabSize": 2,
+  "workbench.editor.revealIfOpen": true,
+  "editor.cursorSurroundingLines": 5,
+  "cursor.cmdk.autoSelect": false,
+  "editor.fontSize": 13.5,
+  "terminal.integrated.fontSize": 13.5,
+  "editor.linkedEditing": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  // "vim.enableNeovim": true,
+  // "vim.neovimUseConfigFile": true,
+  // "vim.neovimConfigPath": "/Users/cralvarez/.config/nvim",
+  // "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": false,
+  "vim.showMarksInGutter": true,
+  "vim.incsearch": false, // false because (<leader> m) to search for method definitions and not move the screen
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.3)",
+  "vim.highlightedyank.duration": 300,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [ "j", "k" ],
+      "after": [ "<Esc>" ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // go to previews/next function definition with regex: (def\ |function\ )
+    {
+      "before": [ "<leader>", "m" ],
+      "after": [ "?", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
+      "commands": [ ":noh" ],
     },
-  
-    "extensions.experimental.affinity": {
-      "vscodevim.vim": 1
+    {
+      "before": [ "<leader>", "M" ],
+      "after": [ "/", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
+      "commands": [ ":noh" ],
     },
+
+    // camel case motion
+    {
+      "before": [ "]", "w" ],
+      "after": [ "<leader>", "w" ]
+    },
+    {
+      "before": [ "[", "w" ],
+      "after": [ "<leader>", "b" ]
+    },
+
+    // tab movements
+    {
+      "before": [ "<C-Shift-l>"],
+      "commands": [ "workbench.action.moveActiveEditorGroupRight" ]
+    },
+    {
+      "before": [ "<leader>", "x" ],
+      "commands": [ "workbench.action.closeActiveEditor" ]
+    },
+    {
+      "before": [ "<leader>", "h" ],
+      "after": [ "C-w", "h" ]
+    },
+    {
+      "before": [ "<leader>", "l" ],
+      "after": [ "C-w", "l" ]
+    },
+    {
+      "before": [ "<leader>", "j" ],
+      "after": [ "C-w", "j" ]
+    },
+    {
+      "before": [ "<leader>", "k" ],
+      "after": [ "C-w", "k" ]
+    },
+    {
+      "before": [ "C-h" ],
+      "commands": [ "workbench.action.previousEditorInGroup" ]
+    },
+    {
+      "before": [ "C-l" ],
+      "commands": [ "workbench.action.nextEditorInGroup" ]
+    },
+
+    // code info
+    {
+      "before": [ "<S-k>"],
+      "commands": [ "editor.action.showHover" ]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    // cursor movements
+    {
+      "before": [ "g", "b" ],
+      "commands": [ "workbench.action.navigateBack" ]
+    },
+    {
+      "before": [ "g", "f" ],
+      "commands": [ "workbench.action.navigateForward" ]
+    },
+    {
+      "before": [ "<leader>", "e" ],
+      "commands": [ "editor.action.marker.next" ]
+    },
+
+    // skip folds when moving up and down
+    {
+      "before": [ "j"],
+      "after": [ "g", "j" ]
+    },
+    {
+      "before": [ "k"],
+      "after": [ "g", "k" ]
+    },
+
+    // vertical scrolling
+    {
+      "before": [ "<C-u>" ],
+      "after": [ "<C-u>", "z", "z" ]
+    },
+    {
+      "before": [ "<C-d>" ],
+      "after": [ "<C-d>", "z", "z" ],
+    },
+    {
+      "before": [ "<c-k>" ],
+      "commands": [ "scrollLineUp", "cursorUp" ],
+    },
+    {
+      "before": [ "<c-j>" ],
+      "commands": [ "scrollLineDown", "cursorDown" ],
+    },
+
+    // refactoring
+    {
+      "before": [ "<leader>", "r" ],
+      "commands": [ "editor.action.rename" ],
+    },
+    {
+      "before": [ "\\", "r" ],
+      "commands": [ "editor.action.formatDocument" ],
+    },
+
+    // cursor editor config
+    {
+      "before": [ "\\", "e" ],
+      "commands": [ "editor.action.enableCppGlobally" ],
+    },
+    {
+      "before": [ "\\", "d" ],
+      "commands": [ "editor.cpp.disableenabled" ],
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-a>": true,
+    "<C-f>": true,
+    "<C-u>": true,
+  },
+
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
 }
