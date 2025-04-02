@@ -1,4 +1,3 @@
-
 {
   "window.commandCenter": true,
   "files.autoSave": "afterDelay",
@@ -38,19 +37,11 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // go to previews/next function definition with regex: (def\ |function\ )
-    {
-      "before": [ "<leader>", "m" ],
-      "after": [ "?", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
-      "commands": [ ":noh" ],
-    },
-    {
-      "before": [ "<leader>", "M" ],
-      "after": [ "/", "d", "e", "f", "\\", " ", "|", "f", "u", "n", "c", "t", "i", "o", "n", "\\", " ", "<cr>" ],
-      "commands": [ ":noh" ],
-    },
+    // NOTES: 
+    // [m to go to the previous method
+    // [[ to go the the previous class definition
+    // [s to go to the previous section (idk how to define the section)
 
-    // camel case motion
     {
       "before": [ "]", "w" ],
       "after": [ "<leader>", "w" ]
