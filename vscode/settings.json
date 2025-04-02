@@ -22,7 +22,7 @@
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": false,
   "vim.showMarksInGutter": true,
-  "vim.incsearch": false, // false because (<leader> m) to search for method definitions and not move the screen
+  "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(250, 240, 170, 0.3)",
