@@ -61,6 +61,10 @@
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.terminal.rename"
+    },
 
     // tab movements
     {
