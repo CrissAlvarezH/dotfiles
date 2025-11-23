@@ -1,3 +1,4 @@
+
 {
   "window.commandCenter": true,
   "files.autoSave": "afterDelay",
@@ -6,11 +7,9 @@
   "makefile.configureOnOpen": true,
   "go.toolsManagement.autoUpdate": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "editor.tabSize": 2,
   "workbench.editor.revealIfOpen": true,
   "editor.cursorSurroundingLines": 5,
-  "cursor.cmdk.autoSelect": false,
-  "editor.fontSize": 13.5,
+  "editor.fontSize": 14,
   "terminal.integrated.fontSize": 13.5,
   "editor.linkedEditing": true,
   "editor.lineNumbers": "relative",
@@ -135,6 +134,15 @@
       "before": [ "<c-j>" ],
       "commands": [ "scrollLineDown", "cursorDown" ],
     },
+    // fold things in editor (functions, classes, etc...)
+    {
+      "before": [ "<leader>", "z" ],
+      "commands": [ "editor.foldAllExcept" ],
+    },
+    {
+      "before": [ "<leader>", "Z" ],
+      "commands": [ "editor.unfoldAll" ],
+    },
 
     // refactoring
     {
@@ -166,5 +174,28 @@
 
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
+  },
+  "debugpy.debugJustMyCode": false,
+  "cursor.cpp.disabledLanguages": [
+    "plaintext"
+  ],
+  "[python]": {
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+  },
+  "explorer.confirmPasteNative": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "workbench.editor.enablePreview": false,
+  "files.exclude": {
+    "**/__pycache__": true
   },
 }
