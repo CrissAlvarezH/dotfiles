@@ -1,0 +1,2 @@
+# Make Option key behave as Alt (sends escape sequences instead of special chars)
+macos-option-as-alt = true
