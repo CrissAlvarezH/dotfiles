@@ -1,2 +1,5 @@
 # Make Option key behave as Alt (sends escape sequences instead of special chars)
 macos-option-as-alt = true
+
+# Shift+Enter sends same as Option+Enter (Esc + CR = newline in zsh)
+keybind = shift+enter=text:\x1b\x0d
